@@ -1,5 +1,32 @@
-﻿// Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -N до N.
-// 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4" 
-// 2 -> " -2, -1, 0, 1, 2"
+﻿// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+// a = 5; b = 7 ->  max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
 
+
+Console.WriteLine("Введите число numberA");
+string numberA = Console.ReadLine();
+
+Console.WriteLine("Введите число numberB");
+string numberB = Console.ReadLine();
+
+int A = Convert.ToInt32(numberA);
+int B = Convert.ToInt32(numberB);
+int max = A;
+int min = B;
+
+if (B > max) 
+{
+    max = B; 
+    min = A;
+}
+else
+{
+    max = A; 
+    min = B;
+}
+
+Console.WriteLine(max);
+Console.WriteLine(min);
+    
 
