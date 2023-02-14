@@ -7,9 +7,13 @@
 
 Console.WriteLine("Введите число numberA");
 string numberA = Console.ReadLine();
-double A = Convert.ToInt32(numberA);
+int A = Convert.ToInt32(numberA);
 
-if (A / 2) 
+if ((A % 2) == 0)
 {
-    
+    Console.WriteLine("четное");
+}
+else
+{
+    Console.WriteLine("нечетное");
 }
