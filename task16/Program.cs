@@ -14,4 +14,7 @@ if(number > 99 && number < 1000)
     Console.WriteLine((number % 100) / 10);
 
 }
-
+else 
+{
+    Console.WriteLine("Неверное число");
+}
