@@ -5,11 +5,19 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите число");
+Console.WriteLine("Введите число от 100");
 int number = Convert.ToInt32(Console.ReadLine());
 
-for(int i = 0; i >= 1000; i++)
+if(number > 100)
 {
-    Console.WriteLine(newNumber = number / 10);
+    while (number > 999)
+    {
+        number = number /10;
+ 
+    }
+    Console.WriteLine(number % 10);
 }
-Console.WriteLine(newNumber);
+else
+{
+    Console.WriteLine("error");
+}
