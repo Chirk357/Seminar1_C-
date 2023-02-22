@@ -10,11 +10,13 @@ int Coordinates(string messageToUser)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int ax = Coordinates("Введите координаты точки по X");
-int ay = Coordinates("Введите координаты точки по Y");
-int az = Coordinates("Введите координаты точки по Z");
+int ax = Coordinates("Введите координаты точки a по X");
+int ay = Coordinates("Введите координаты точки a по Y");
+int az = Coordinates("Введите координаты точки a по Z");
 
-int bx = Coordinates("Введите координаты точки по X");
-int by = Coordinates("Введите координаты точки по Y");
-int bz = Coordinates("Введите координаты точки по Z");
+int bx = Coordinates("Введите координаты точки b по X");
+int by = Coordinates("Введите координаты точки b по Y");
+int bz = Coordinates("Введите координаты точки b по Z");
 
+double result = Math.Sqrt(Math.Pow((ax - bx) , 2) + Math.Pow((ay - by) , 2) + Math.Pow((az - bz) , 2));
+Console.WriteLine($"{result:f2}");
