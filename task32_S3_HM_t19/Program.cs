@@ -6,20 +6,18 @@
 // 12821 -> да
 
 
-int Polindrom(string messageToUser);
-{int N = Convert.ToInt32(Console.ReadLine());
-    if (N > 9999 && N < 100000)
-    {
-        int LastDigit = N / 10;
-        int NewNumber = N % 10;
-        Console.WriteLine(LastDigit; NewNumber)
-    }
-}
-
 Console.WriteLine("Введите пятизначное число");
 int N = Convert.ToInt32(Console.ReadLine());
 
+int LastDigit;
+int LastDigit2;
+int LastDigit3;
+int LastDigit4;
 
+int N2;
+int N3;
+int N4;
+int N5;
 
 if (N > 9999 && N < 100000)
 {
