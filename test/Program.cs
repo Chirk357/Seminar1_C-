@@ -5,47 +5,75 @@
 // 23432 -> да
 // 12821 -> да
 
-
-int Polindrom(string messageToUser);
-{int N = Convert.ToInt32(Console.ReadLine());
-    if (N > 9999 && N < 100000)
-    {
-        int LastDigit = N / 10;
-        int NewNumber = N % 10;
-        Console.WriteLine(LastDigit; NewNumber)
-    }
-}
-
 Console.WriteLine("Введите пятизначное число");
-int N = Convert.ToInt32(Console.ReadLine());
+int Num = Convert.ToInt32(Console.ReadLine());-
 
-
-
-if (N > 9999 && N < 100000)
+if(Num > 9999 && Num < 100000)
 {
-    LastDigit = N / 10;
-    N2 = N % 10;
+    int LastDigit = Num % 10;
+    int Num2 = Num / 10;
 
-    LastDigit2 = N2 / 10;
-    N3 = N2 % 10;
+    int LastDigit2 = Num2 % 10;
+    int Num3 = Num2 / 10;
 
-    LastDigit3 = N3 / 10;
-    N4 = N3 % 10;
+    int LastDigit3 = Num3 % 10;
+    int Num4 = Num3 / 10;
 
-    LastDigit4 = N4 / 10;
-    N5 = N4 % 10;
-}
+    int LastDigit4 = Num4 % 10;
+    int Num5 = Num4 / 10;
 
-Console.WriteLine("не полиндром");
-
-if(LastDigit == N5)
-{
-    if(LastDigit2 == LastDigit4)
+    if(LastDigit == Num5)
     {
-        Console.WriteLine("полиндром");
+        if(LastDigit2 == LastDigit4)
+        {
+            Console.WriteLine("Полиндром");
+        }
+        else
+        {
+            Console.WriteLine("не полиндром");
+        }
+    }
+    else
+    {
+        Console.WriteLine("не полиндром");
     }
 }
-else
-{
-    Console.WriteLine("не полиндром");
-}
+Console.WriteLine("число не пятизначное");
+
+
+
+
+
+
+
+// Console.WriteLine("Введите пятизначное число");
+// int Num = Convert.ToInt32(Console.ReadLine());
+
+
+// int LastDigit = Num % 10;
+// int Num2 = Num / 10;
+
+// int LastDigit2 = Num2 % 10;
+// int Num3 = Num2 / 10;
+
+// int LastDigit3 = Num3 % 10;
+// int Num4 = Num3 / 10;
+
+// int LastDigit4 = Num4 % 10;
+// int Num5 = Num4 / 10;
+
+// if(LastDigit == Num5)
+// {
+//     if(LastDigit2 == LastDigit4)
+//     {
+//         Console.WriteLine("Полиндром");
+//     }
+//     else
+//     {
+//         Console.WriteLine("error");
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("error");
+// }
