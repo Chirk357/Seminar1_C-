@@ -38,6 +38,9 @@ if(Num > 9999 && Num < 100000)
         Console.WriteLine("не полиндром");
     }
 }
-Console.WriteLine("число не пятизначное");
+else
+{
+    Console.WriteLine("число не пятизначное");
+}
 
 
