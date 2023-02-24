@@ -6,7 +6,7 @@
 // 12821 -> да
 
 Console.WriteLine("Введите пятизначное число");
-int Num = Convert.ToInt32(Console.ReadLine());-
+int Num = Convert.ToInt32(Console.ReadLine());
 
 if(Num > 9999 && Num < 100000)
 {
