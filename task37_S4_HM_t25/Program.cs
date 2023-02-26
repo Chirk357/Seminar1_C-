@@ -11,28 +11,29 @@ int ReadNumber(string messageToUser)
      
 }
 
-int CountofA(int A, int B)
+int Multiply(int A, int B)
 {
     int result = 1;
-    int count = 2;
+    int count = 1;
 
     if(B >= 1)
     {
-        for(count = 2; count <= B; count++)
+       
+       for(count = 1; count <= B; count++)
         {
-            result = result * A;
-        
+           result = result * A;
         }
     }
+    
     else
     {
         Console.WriteLine("over");
     }
-    return count;
+    return result;
 }
 
 int valueone = ReadNumber("Введите число A");
 int valuetwo = ReadNumber("Введите число B, где B > 0");
 Console.WriteLine();
-int count = CountofA(valueone, valuetwo);
-Console.WriteLine(count);
+int res = Multiply(valueone, valuetwo);
+Console.WriteLine(res);

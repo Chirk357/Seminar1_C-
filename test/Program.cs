@@ -1,79 +1,42 @@
-﻿// Задача 19: 
-// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-// 
-// 14212 -> нет
-// 23432 -> да
-// 12821 -> да
+﻿// Задача 25: 
+// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
 
-Console.WriteLine("Введите пятизначное число");
-int Num = Convert.ToInt32(Console.ReadLine());
 
-if(Num > 9999 && Num < 100000)
+int ReadNumber(string messageToUser)
 {
-    int LastDigit = Num % 10;
-    int Num2 = Num / 10;
+    Console.WriteLine(messageToUser);
+    return Convert.ToInt32(Console.ReadLine());
 
-    int LastDigit2 = Num2 % 10;
-    int Num3 = Num2 / 10;
-
-    int LastDigit3 = Num3 % 10;
-    int Num4 = Num3 / 10;
-
-    int LastDigit4 = Num4 % 10;
-    int Num5 = Num4 / 10;
-
-    if(LastDigit == Num5)
-    {
-        if(LastDigit2 == LastDigit4)
-        {
-            Console.WriteLine("Полиндром");
-        }
-        else
-        {
-            Console.WriteLine("не полиндром");
-        }
-    }
-    else
-    {
-        Console.WriteLine("не полиндром");
-    }
 }
-Console.WriteLine("число не пятизначное");
+
+int Multiply(int A, int B)
+{
+    int result = 1;
+    int count = 1;
+
+
+    for (count = 1; count <= B; count++)
+    {
+        result = result * A;
+    }
+    return result;
+
+}
 
 
 
+int valueone = ReadNumber("Введите число A");
+int valuetwo = ReadNumber("Введите число B, где B > 0");
+Console.WriteLine();
 
-
-
-
-// Console.WriteLine("Введите пятизначное число");
-// int Num = Convert.ToInt32(Console.ReadLine());
-
-
-// int LastDigit = Num % 10;
-// int Num2 = Num / 10;
-
-// int LastDigit2 = Num2 % 10;
-// int Num3 = Num2 / 10;
-
-// int LastDigit3 = Num3 % 10;
-// int Num4 = Num3 / 10;
-
-// int LastDigit4 = Num4 % 10;
-// int Num5 = Num4 / 10;
-
-// if(LastDigit == Num5)
-// {
-//     if(LastDigit2 == LastDigit4)
-//     {
-//         Console.WriteLine("Полиндром");
-//     }
-//     else
-//     {
-//         Console.WriteLine("error");
-//     }
-// }
-// else
-// {
-//     Console.WriteLine("error");
-// }
+if(valuetwo >= 1)
+{
+    int res = Multiply(valueone, valuetwo);
+    Console.WriteLine(res);
+}
+else
+{
+    Console.WriteLine("неверно задано число B");
+}
