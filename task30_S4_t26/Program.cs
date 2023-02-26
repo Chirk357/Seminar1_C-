@@ -13,20 +13,55 @@ int ReadNumber(string message) // 1й метод отвечает за ввод 
    
 }
 
-int countOfDigits(int number);
+int Counting(int a)
 {
-    int count = 0; // можно записать int count;
-    for(count = 0; number != 0; count++)
+   
+    int count = 0;
+    for(count = 0; a != 0; count++)
     {
-        number = number / 10; // или number / 10;
+        a = a / 10;
     }
     return count;
+    
 }
 
+int value = ReadNumber("Введите число");
+int CountOfD = Counting(value);
+Console.WriteLine(CountOfD);
 
-int UserNumber = ReadNumber("Введите число");
-int result = countOfDigits(UserNumber);
-Console.WriteLine(result);
+
+
+
+
+
+
+
+
+
+
+
+
+// int ReadNumber(string message) // 1й метод отвечает за ввод числа
+// {
+//     Console.WriteLine(message);
+//     return Convert.ToInt32(Console.ReadLine());
+   
+// }
+
+// int countOfDigits(int number);
+// {
+//     int count = 0; // можно записать int count;
+//     for(count = 0; number != 0; count++)
+//     {
+//         number = number / 10; // или number / 10;
+//     }
+//     return count;
+// }
+
+
+// int UserNumber = ReadNumber("Введите число");
+// int result = countOfDigits(UserNumber);
+// Console.WriteLine(result);
 
 
 
