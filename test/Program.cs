@@ -1,42 +1,31 @@
-﻿// Задача 25: 
-// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-// 3, 5 -> 243 (3⁵)
-// 2, 4 -> 16
-
+﻿// Задача 27: 
+// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
 
 int ReadNumber(string messageToUser)
 {
     Console.WriteLine(messageToUser);
     return Convert.ToInt32(Console.ReadLine());
-
 }
 
-int Multiply(int A, int B)
+int SumToN(int N)
 {
-    int result = 1;
-    int count = 1;
-
-
-    for (count = 1; count <= B; count++)
+    int sum = 0;
+    
+    while(N > 0)
     {
-        result = result * A;
+        int newN = N % 10;
+        int Num = N / 10;
+        
+        sum = sum + newN;
+    
     }
-    return result;
-
+    return sum;
 }
 
 
-
-int valueone = ReadNumber("Введите число A");
-int valuetwo = ReadNumber("Введите число B, где B > 0");
-Console.WriteLine();
-
-if(valuetwo >= 1)
-{
-    int res = Multiply(valueone, valuetwo);
-    Console.WriteLine(res);
-}
-else
-{
-    Console.WriteLine("неверно задано число B");
-}
+int value = ReadNumber("введите число");
+int sum = SumToN(value);
+Console.WriteLine(sum);

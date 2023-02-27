@@ -8,19 +8,24 @@ int ReadNumber(string messageToUser)
 {
     Console.WriteLine(messageToUser);
     return Convert.ToInt32(Console.ReadLine());
-     
 }
 
-int SumToN(int N);
+int SumToN(int N)
 {
-   for(int i = 0; N =! 0; i++)
+    int sum = 0;
+    
+    while(N > 0)
     {
-    N = N % 10;
-    int sum = sum + N;
-
-    return sum;
+        int newN = N % 10;
+        int Num = N / 10;
+        
+        sum = sum + newN;
+    
     }
+    return sum;
 }
+
 
 int value = ReadNumber("введите число");
 int sum = SumToN(value);
+Console.WriteLine(sum);
