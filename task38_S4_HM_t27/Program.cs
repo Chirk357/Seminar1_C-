@@ -13,11 +13,12 @@ int ReadNumber(string messageToUser)
 int SumToN(int N)
 {
     int sum = 0;
+    int newN = 0;
     
     while(N > 0)
     {
-        int newN = N % 10;
-        int Num = N / 10;
+        newN = N % 10;
+        N = N / 10;
         
         sum = sum + newN;
     
