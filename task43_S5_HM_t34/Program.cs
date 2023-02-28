@@ -11,28 +11,22 @@ int ReadNumber(string messageToUser)
     return value;
 }
 
-int[] GetRandomArray(int length)
+int[] GetRandomArray(int length, int leftRange, int rightRange)
 {
-    int leftRange = 100;
-    int rightRange = 999;
     int[] array = new int[length];
-
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Random.Shared.Next(leftRange, rightRange + 1);
     }
 
-     return array;
-       
+    return array;
 }
 
-
-int[] EvenNumber(int array[])
-{
-    for(int i = 0; i < array.Length; i++)
-    array[i] = array[i] %2 == 0
-}
 
 int lengthOfArray = ReadNumber("Задайте длину массива");
-int[] myArray = GetRandomArray(lengthOfArray);
+int leftBorder = ReadNumber("Задайте левую границу случайного диапазона");
+int rightBorder = ReadNumber("Задайте правую границу случайного диапазона");
+
+int[] myArray = GetRandomArray(lengthOfArray, leftBorder, rightBorder);
+
 Console.WriteLine($"[{string.Join(", ", myArray)}]");
