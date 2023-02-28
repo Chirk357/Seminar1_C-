@@ -4,22 +4,35 @@
 // [-4, -8, 8, 2] -> [4, 8, -8, -2] 
 
 
-int[] array = { 1, 4, 57, 2, 2, 66, 83, 4, 74, 41, 444 };
-int i = 0;
-ок
-
-for(i = 0; i < array.Length; i++)
+int[] GetRandomArray(int length, int leftRange, int rightRange)
 {
-    array[i] = array[i] * (-1);
+
+    int[] array = new int[length];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = Random.Shared.Next(leftRange, rightRange + 1);
+    }
+
+    return array;
 }
-Console.WriteLine(array[i]);
+
+void InvertElements(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        array[i] *= -1;
+    }
+}
 
 
-// int [] a = {1,2,-3,5};
-// void function()
-// {
-//     for(int i =0 ; i< a.Length;i++) a[i] *=(-1);
-//     foreach (var item in a) Console.Write($"{item} ,");  
-// }
+int lengthOfArray = 12;
+int leftBorder = -9;
+int rightBorder = 9;
 
-// function();
+int[] myArray = GetRandomArray(lengthOfArray, leftBorder, rightBorder);
+
+Console.WriteLine($"[{string.Join(", ", myArray)}]");
+InvertElements(myArray);
+
+Console.WriteLine($"[{string.Join(", ", myArray)}]");
