@@ -14,6 +14,9 @@ int ReadNumber(string messageToUser)
 int[] GetRandomArray(int length, int leftRange, int rightRange)
 {
     int[] array = new int[length];
+    int leftRange = 99;
+    int ri
+
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Random.Shared.Next(leftRange, rightRange + 1);

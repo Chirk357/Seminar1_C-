@@ -29,8 +29,12 @@ int[] GetRandomArray(int length)
 
 int[] EvenNumber(int array[])
 {
-    for(int i = 0; i < array.Length; i++)
-    array[i] = array[i] %2 == 0
+    int i = 0;
+    for(i = 0; i < array.Length; i++)
+    {
+       array[i] = array[i] % 2;
+    }
+    return i;
 }
 
 int lengthOfArray = ReadNumber("Задайте длину массива");
