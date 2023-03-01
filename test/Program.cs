@@ -22,17 +22,24 @@ int[] GetRandomArray(int length)
         array[i] = Random.Shared.Next(leftRange, rightRange + 1);
     }
 
-     return array;
-       
+     return array;   
 }
 
 
-int[] EvenNumber(int array[])
+int EvenNumber(int[] array)
 {
     int i = 0;
     for(i = 0; i < array.Length; i++)
     {
        array[i] = array[i] % 2;
+       if(array[i] == 0)
+       {
+            return i;
+       }
+    //    else
+    //    {
+    //         return Console.WriteLine("error");
+    //    }
     }
     return i;
 }
@@ -40,3 +47,5 @@ int[] EvenNumber(int array[])
 int lengthOfArray = ReadNumber("Задайте длину массива");
 int[] myArray = GetRandomArray(lengthOfArray);
 Console.WriteLine($"[{string.Join(", ", myArray)}]");
+int countOfI = EvenNumber(myArray);
+Console.WriteLine($"{countOfI}");
