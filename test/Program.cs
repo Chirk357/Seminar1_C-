@@ -34,6 +34,7 @@ int EvenNumber(int[] array)
     {
         if ((array[i] % 2) == 0)
         {
+            Console.WriteLine(i);
             count++;
         }
     }
