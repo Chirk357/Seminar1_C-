@@ -25,7 +25,7 @@ int[] GetRandomArray(int length, int leftRange, int rightRange)
     return array;
 }
 
-int MinValue(int[] array)
+(int,int) MinValue(int[] array)
 {   
     int min = array[0];
     

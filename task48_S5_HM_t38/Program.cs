@@ -64,8 +64,8 @@ int Substraction(int[] array, int max, int min)
     return substr;
 }
 
-int leftSide = 0;
-int rightSide = 10;
+int leftSide = 1;
+int rightSide = 15;
 
 
 int lengthOfArray = ReadNumber("Задайте длину массива");
