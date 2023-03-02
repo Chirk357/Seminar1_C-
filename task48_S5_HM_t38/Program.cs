@@ -25,36 +25,19 @@ int[] GetRandomArray(int length, int leftRange, int rightRange)
     return array;
 }
 
-int MinValue(int[] array)
+(int,int) MinMax(int[] array)
 {   
     int min = array[0];
-    
-    for(int i = 1; i < array.Length; i++)
+    int max = array[1];
+    for(int i = 0; i < array.Length; i++)
     {
-        if (array[i] < min) 
-        {
-            min = array[i];
-        }
+        if (array[i] < min) min = array[i];
+        else if(array[i] > max) max = array[i];
     }
         
-    return min;
+    return (min, max);
 }
 
-
-int MaxValue(int[] array)
-{   
-    int max = array[0];
-    
-    for(int i = 1; i < array.Length; i++)
-    {
-        if (array[i] > max) 
-        {
-            max = array[i];
-        }
-    }
-        
-    return max;
-}
 
 
 int Substraction(int[] array, int max, int min)
@@ -64,15 +47,14 @@ int Substraction(int[] array, int max, int min)
     return substr;
 }
 
-int leftSide = 1;
-int rightSide = 15;
+int leftSide = 0;
+int rightSide = 20;
 
 
 int lengthOfArray = ReadNumber("Задайте длину массива");
 int[] ArrayNew = GetRandomArray(lengthOfArray, leftSide, rightSide);
 Console.WriteLine($"[{string.Join(", ", ArrayNew)}]");
-int minimum = MinValue(ArrayNew);
-int maximum = MaxValue(ArrayNew);
+(int minimum, int maximum) = MinMax(ArrayNew);
 Console.WriteLine($"{minimum}, {maximum}");
 int result = Substraction(ArrayNew, maximum, minimum);
 Console.WriteLine(result);
