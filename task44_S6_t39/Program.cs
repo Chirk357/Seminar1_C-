@@ -5,7 +5,6 @@
 // [6 7 3 6] -> [6 3 7 6]
 
 
-
 int ReadNumber(string messageToUser)
 {
     Console.WriteLine(messageToUser);
@@ -41,3 +40,6 @@ int[] myArray = GetRandomArray(LENGTH, LEFTBORDER, RIGHTBORDER);
 Console.WriteLine(string.Join(", ", myArray));
 ReverseArray(myArray);
 Console.WriteLine(string.Join(", ", myArray));
+
+
+

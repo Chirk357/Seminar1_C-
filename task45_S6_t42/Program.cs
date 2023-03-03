@@ -5,6 +5,7 @@
 // 2  -> 10
 
 
+
 int ReadNumber(string messageToUser)
 {
     Console.WriteLine(messageToUser);
