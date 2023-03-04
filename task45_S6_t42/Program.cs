@@ -5,23 +5,26 @@
 // 2  -> 10
 
 
+int n = 44;
 
-int ReadNumber(string messageToUser)
+int countOfDigits = 0;
+int nCopy = n;
+
+while(nCopy != 0)
 {
-    Console.WriteLine(messageToUser);
-    int value = Convert.ToInt32(Console.ReadLine());
-    return value;
+    nCopy /= 2;
+    countOfDigits++;
+}
+Console.WriteLine(countOfDigits);
+
+int[] binaryNumber = new int[countOfDigits];
+
+for(int i = 0; i < binaryNumber.Length; i++)
+{
+    binaryNumber[i] = n % 2;
+    n /= 2;
 }
 
-int[] GetRandomArray(int length, int leftRange, int rightRange)
-{
-    int[] array = new int[length];
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = Random.Shared.Next(leftRange, rightRange + 1);
-    }
-    return array;
-}
 
 void ReverseArray(int[] array)
 {
@@ -33,11 +36,9 @@ void ReverseArray(int[] array)
     }
 }
 
-const int LENGTH = 6;
-const int LEFTBORDER = -10;
-const int RIGHTBORDER = 10;
 
-int[] myArray = GetRandomArray(LENGTH, LEFTBORDER, RIGHTBORDER);
-Console.WriteLine(string.Join(", ", myArray));
-ReverseArray(myArray);
-Console.WriteLine(string.Join(", ", myArray));
+
+Console.WriteLine(string.Join("", binaryNumber));
+ReverseArray(binaryNumber);
+Console.WriteLine(string.Join("", binaryNumber));
+
