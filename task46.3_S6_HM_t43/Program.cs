@@ -9,6 +9,7 @@
 // x = (d - c) / (a - b) --> x = (b2 - b1) / (k1 - k2)
 
 
+//метод для считывания целого числа с консоли
 int ReadNumber(string messageToUser)
 {
     Console.WriteLine(messageToUser);
@@ -19,7 +20,8 @@ int ReadNumber(string messageToUser)
 {
     double x = (B2 - B1) / (K1 - K2);
     // Console.WriteLine((double)(B2 - B1) / (K1 - K2));
-    double y = (K1 * x) + B1;
+    double y = K1 * x + B1;
+    double y = k1 * (b2 - b1) / (k1 - k2) + B1;
     // Console.WriteLine((double)((K1 * x) + B1));
     return (x, y);
 }
