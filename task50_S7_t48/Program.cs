@@ -46,3 +46,6 @@ int m = ReadNumber("Введите количество строк:");
 int n = ReadNumber("Введите количество столбцов:");
 int[,] myMatrix = GetRandomMatrix(m, n);
 PrintMatrix(myMatrix);
+
+
+

@@ -1,4 +1,5 @@
-﻿// Задача 46: Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+﻿// Задача 46: 
+// Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
 // m = 3, n = 4.
 // 1 4 8 19
 // 5 -2 33 -2
@@ -20,7 +21,8 @@ int[,] GetRandomMatrix(int rows, int columns, int leftBorder = 0, int rightBorde
     {
         for(int j = 0; j < matrix.GetLength(1); j++)
         {
-            mc
+            matrix[i, j] = Random.Shared.Next(leftBorder, rightBorder + 1);
+        }
     }
 
     return matrix;
