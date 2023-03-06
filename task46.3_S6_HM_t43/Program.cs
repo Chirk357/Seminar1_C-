@@ -16,12 +16,12 @@ int ReadNumber(string messageToUser)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-(double, double) Calculations(int B1, int B2, int K1, int K2)
+(double, double) Calculations(double B1, double B2, double K1, double K2)
 {
     double x = (B2 - B1) / (K1 - K2);
     // Console.WriteLine((double)(B2 - B1) / (K1 - K2));
     double y = K1 * x + B1;
-    double y = k1 * (b2 - b1) / (k1 - k2) + B1;
+    // double y = k1 * (b2 - b1) / (k1 - k2) + B1;
     // Console.WriteLine((double)((K1 * x) + B1));
     return (x, y);
 }
