@@ -74,12 +74,6 @@ Console.WriteLine();
 
 
 
-
-
-
-
-
-
 // int ReadNumber(string messageToUser)
 // {
 //     Console.WriteLine(messageToUser);
