@@ -9,9 +9,14 @@
 
 // 17 -> такого числа в массиве нет
 
+int ReadNumber(string messageToUser)
+{
+    Console.WriteLine(messageToUser);
+    int value = Convert.ToInt32(Console.ReadLine());
+    return value;
+}
 
-
-int[,] GetRandomMatrix(int rows, int columns, int leftBorder = 0, int rightBorder = 10)
+int[,] GetRandomMatrix(int rows, int columns, int leftBorder = 1, int rightBorder = 9)
 {
 
     int[,] matrix = new int[rows, columns];
@@ -39,7 +44,21 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int m = 4;
-int n = 5;
-int[,] myMatrix = GetRandomMatrix(m, n);
+
+int rowsMatrix = 4;
+int columnsMatrix = 5;
+
+int m = ReadNumber("Введите индекс элемента для строки:");
+int n = ReadNumber("Введите индекс элемента для стобца:");
+Console.WriteLine();
+int[,] myMatrix = GetRandomMatrix(rowsMatrix, columnsMatrix);
 PrintMatrix(myMatrix);
+Console.WriteLine();
+if(m <= rowsMatrix && n <= columnsMatrix)
+{
+    Console.WriteLine(myMatrix[m, n]);
+}
+else
+{
+    Console.WriteLine("error");
+}
