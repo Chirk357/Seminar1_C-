@@ -12,7 +12,6 @@ int[,] matrix = new int[,]
     {9,5,1,5},
     {8,2,6,7},
     {3,6,7,5},
-    {2,5,9,3}
 };
 
 void PrintMatrix(int[,] matrix)
@@ -29,18 +28,27 @@ void PrintMatrix(int[,] matrix)
 
 (int, int) meanValue(int[,] matrix)
 {
-    int meanColumns = 0;
-    int sum = 0;
-    int count = 0;
+    int meanColumns1 = 0;
+    int sum1 = 0;
+    int count1 = 0;
     for(int j = 0; j < matrix.GetLength(1); j++)
     {
         for(int i = 0; i < matrix.GetLength(0); i++)
         {
-            sum = sum + matrix[i, 0];
-            // Console.WriteLine(sum);
-            count++;
-            // Console.WriteLine(count);
-            
+            if(j == 0)
+            {
+                sum = sum + matrix[i, j];
+                Console.WriteLine(sum);
+                count++;
+                // Console.WriteLine(count);
+            }
+           if(j == 1)
+            {
+                sum = sum + matrix[i, j];
+                Console.WriteLine(sum);
+                count++;
+                // Console.WriteLine(count);
+            } 
         }
         Console.WriteLine();
     }
@@ -49,6 +57,5 @@ void PrintMatrix(int[,] matrix)
 
 
 PrintMatrix(matrix);
-Console.WriteLine();
 (int Summ, int Count) = meanValue(matrix);
 Console.WriteLine($"{Summ}, {Count}");
