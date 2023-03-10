@@ -26,43 +26,35 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-(int[], int) sumOfColums(int[,] matrix)
+// double sumOfColums(int[,] matrix)
+// {
+PrintMatrix(matrix);
+Console.WriteLine();
+
+int i = 3;
+int j = 4;
+// double[] newArray = new double[j];
+double average = 0;
+
+for (j = 0; j < matrix.GetLength(1); j++)
 {
-
-    int i = 3;
-    int j = 4;
-    int count = 0;
-    int[] newArray = new int[j];
-
-    for (j = 0; j < matrix.GetLength(1); j++)
+    for (i = 0; i < matrix.GetLength(0); i++)
     {
-        for (i = 0; i < matrix.GetLength(0); i++)
-        {
-            newArray[i] = newArray[i] + matrix[i, j];
-            count++;
-            
-            // Console.WriteLine(count);
-        }
+        average += matrix[i, j];
+        // average += newArray[i] + matrix[i, j];
+        // average = average + newArray[i] + matrix[i, j];
+        // count++;
+
     }
-    return (newArray, count);
+    average = average / matrix.GetLength(0);
+    Console.WriteLine($"Среднее для столбца {average}");
 }
-
-double[] meanValue(int[] array, int count)
-{
-    double[] meanArray = new double[array.Length];
-
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        meanArray[i] = array[i] / count;
-    }
-    return meanArray;
-}
+//     return average;
+// }
 
 
-    PrintMatrix(matrix);
-    (int[] myArray, int countOfNumbers) = sumOfColums(matrix);
-    Console.WriteLine($"[{string.Join(", ", myArray)}]");
-    Console.WriteLine(countOfNumbers);
-    double[] resultArray = meanValue(myArray, countOfNumbers);
-    Console.WriteLine($"[{string.Join(", ", resultArray)}]");
+
+// double result = sumOfColums(matrix);
+// Console.WriteLine();
+// Console.WriteLine(result);
 
