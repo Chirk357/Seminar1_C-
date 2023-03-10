@@ -28,33 +28,43 @@ void PrintMatrix(int[,] matrix)
 
 // double sumOfColums(int[,] matrix)
 // {
+
+// int[] Sum(int[,] matrix)
+// {
 PrintMatrix(matrix);
 Console.WriteLine();
 
 int i = 3;
 int j = 4;
-// double[] newArray = new double[j];
+int[] newArray = new int[j];
 double average = 0;
+
 
 for (j = 0; j < matrix.GetLength(1); j++)
 {
     for (i = 0; i < matrix.GetLength(0); i++)
     {
-        average += matrix[i, j];
-        // average += newArray[i] + matrix[i, j];
+
+        newArray[i] += matrix[i, j];
         // average = average + newArray[i] + matrix[i, j];
-        // count++;
 
     }
-    average = average / matrix.GetLength(0);
-    Console.WriteLine($"Среднее для столбца {average}");
+    Console.WriteLine(newArray[i]);
+    // Console.WriteLine(average = average / matrix.GetLength(0));
 }
+
+for (i = 0; i < newArray.Length; i++)
+{
+    Console.Write((newArray[i] / i) + " ");
+}
+Console.ReadLine();
+//     return newArray;
+// }
 //     return average;
 // }
 
 
-
-// double result = sumOfColums(matrix);
+// PrintMatrix(matrix);
 // Console.WriteLine();
-// Console.WriteLine(result);
-
+// int[] myArray = Sum(matrix);
+// Console.WriteLine($"[{string.Join(", ", myArray)}]");

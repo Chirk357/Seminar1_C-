@@ -16,9 +16,9 @@ int[,] matrix = new int[,]
 
 void PrintMatrix(int[,] matrix)
 {
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for(int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
             Console.Write(matrix[i, j] + " ");
         }
@@ -26,36 +26,35 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-(int, int) meanValue(int[,] matrix)
-{
-    int meanColumns1 = 0;
-    int sum1 = 0;
-    int count1 = 0;
-    for(int j = 0; j < matrix.GetLength(1); j++)
-    {
-        for(int i = 0; i < matrix.GetLength(0); i++)
-        {
-            if(j == 0)
-            {
-                sum = sum + matrix[i, j];
-                Console.WriteLine(sum);
-                count++;
-                // Console.WriteLine(count);
-            }
-           if(j == 1)
-            {
-                sum = sum + matrix[i, j];
-                Console.WriteLine(sum);
-                count++;
-                // Console.WriteLine(count);
-            } 
-        }
-        Console.WriteLine();
-    }
-    return (sum, count);
-}
-
-
+// double sumOfColums(int[,] matrix)
+// {
 PrintMatrix(matrix);
-(int Summ, int Count) = meanValue(matrix);
-Console.WriteLine($"{Summ}, {Count}");
+Console.WriteLine();
+
+int i = 3;
+int j = 4;
+// double[] newArray = new double[j];
+double average = 0;
+
+for (j = 0; j < matrix.GetLength(1); j++)
+{
+    for (i = 0; i < matrix.GetLength(0); i++)
+    {
+        average += matrix[i, j];
+        // average += newArray[i] + matrix[i, j];
+        // average = average + newArray[i] + matrix[i, j];
+        // count++;
+
+    }
+    average = average / matrix.GetLength(0);
+    Console.WriteLine($"Среднее для столбца {average}");
+}
+//     return average;
+// }
+
+
+
+// double result = sumOfColums(matrix);
+// Console.WriteLine();
+// Console.WriteLine(result);
+
