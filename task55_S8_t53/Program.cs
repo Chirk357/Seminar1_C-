@@ -3,7 +3,6 @@
 // Напишите программу, которая поменяет местами первую и последнюю строку массива.
 
 
-
 int[,] matrix = new int[,]{
     {0,5,1,2},
     {5,2,6,7},
@@ -13,9 +12,11 @@ int[,] matrix = new int[,]{
 
 void ReplaceRows(int[,] matrix)
 {
-    for(int i = 0; i < matrix.GetLength(1); i++)
+    // нужен только один цикл, потому что мы в люом массиве будем менять 1ю(
+    // (GetLength(0)) и последнюю строку(GetLength(0) - 1). А значит нужно перелистывать только столбцы.
+    for(int i = 0; i < matrix.GetLength(1); i++)                                          
     {
-        int temp = matrix[0, i];
+        int temp = matrix[0, i]; // в темп кладем значение по индексу в 0й строке и столбце i
         matrix[0, i] = matrix[matrix.GetLength(0)-1, i];
         matrix[matrix.GetLength(0)-1, i] = temp;
     }
