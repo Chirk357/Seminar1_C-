@@ -12,11 +12,15 @@
 // 2 3 5 9
 // 2 4 4 8
 
+
+
+
+
 int[,] matrix = new int[,]
 {
-    {1,3,9,4},
-    {1,3,9,4},
-    {1,3,9,4}
+    {1,3,2,4},
+    {8,3,9,4},
+    {1,7,5,4}
 };
 
 void PrintMatrix(int[,] matrix)
@@ -36,21 +40,18 @@ int[,] sortedMatrix(int[,] matrix)
     
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
         {
-            int min = matrix[i, j];
-            for (int k = 0; k < matrix.GetLength(1); k++)
+      
+            for (int k = 0; k < matrix.GetLength(1) - j - 1; k++)
             {
-                if (matrix[i, k] < min)
+                if (matrix[i, k] < matrix[i, k + 1])
                 {
-                    int temp = matrix[i, k];
-                    matrix[i, k] = matrix[i, j];
-                    matrix[i , j] = temp;
+                    int temp = matrix[i, k + 1];
+                    matrix[i, k + 1] = matrix[i, k];
+                    matrix[i , k] = temp;
                 }
-                else
-                {
-                    min = matrix[i , j];
-                }
+                
             }
 
 
