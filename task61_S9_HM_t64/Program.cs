@@ -6,11 +6,12 @@
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
 int number = 5;
-PrintNTo1(number);
+PrintToN(number);
 
-void PrintNTo1(int n)
+void PrintToN(int n)
 {
     if (n < 1) return;
-    PrintNTo1(n - 1) + n;
     Console.Write($"{n} ");
+    PrintToN(n - 1);
 }
+
